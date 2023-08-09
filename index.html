@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+
+</head>
+
+<body>
+
+    <div class="resultado">
+        <div id="resultado">
+            <h5 for="resultado">Seu resultado aparecerá aqui.</h5>
+
+        </div>
+
+
+        <table class="table-calc" cellspacing="0">
+            <tbody>
+                <tr class="table-calc-blue">
+                </tr>
+                <td style="color:white;">IMC</td>
+                <td style="color:white;">Classificação</td>
+                <td style="color:white;" style=" text-align: center">Obesidade <small>(grau)</small></td>
+                </tr>
+
+                <tr id="result_calc_0" style="background-color: rgb(255, 255, 255);">
+                    <td>Menor que 17</td>
+                    <td>Magreza Grave</td>
+                    <td style="text-align: center">0</td>
+                </tr>
+
+                <tr id="result_calc_1" style="background-color: rgb(255, 255, 255);">
+                    <td>Menor que 18,5</td>
+                    <td>Magreza</td>
+                    <td style="text-align: center">0</td>
+                </tr>
+
+                <tr id="result_calc_2" style="background-color: rgb(255, 255, 255);">
+                    <td>Entre 18,5 e 24,9</td>
+                    <td>Normal</td>
+                    <td style="text-align: center">0</td>
+                </tr>
+
+                <tr id="result_calc_3" style="background-color: rgb(255, 255, 255);">
+                    <td>Entre 25,0 e 29,9</td>
+                    <td>Proximo a obesidade</td>
+                    <td style="text-align: center">0</td>
+                </tr>
+
+                <tr id="result_calc_4" style="background-color: rgb(255, 255, 255);">
+                    <td>Entre 30,0 e 34,9</td>
+                    <td>Obesidade</td>
+                    <td style="text-align: center">I</td>
+                </tr>
+
+                <tr id="result_calc_5" style="background-color: rgb(255, 255, 255);">
+                    <td>Entre 35,0 e 39,9</td>
+                    <td>Obesidade</td>
+                    <td style="text-align: center">II</td>
+                </tr>
+
+
+                <tr id="result_calc_6" style="background-color: rgb(255, 255, 255);">
+                    <td>Maior que 40,0</td>
+                    <td>Obesidade Grave</td>
+                    <td style="text-align: center">III</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+    <form name="Calculo IMC" onsubmit="return calcular(event)" class="formImc">
+        <label>Digite seu peso (em kg)</label>
+        <input type="text" nome="peso" id="peso" placeholder="Ex.:60" />
+
+        <label>Digite sua altura (em cm)</label>
+        <input type="text" nome="altura" id="altura" placeholder="Ex.:170" />
+
+        <input type="submit" value="Calcular IMC">
+    </form>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+<style>
+    html {
+        background-color: lightblue;
+
+    }
+
+    .formImc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        gap: 10px;
+
+    }
+
+    .formImc input {
+        width: 200px;
+        height: 50px;
+        font-size: large;
+        text-align: center;
+        font-family: 'Courier New';
+
+    }
+
+    .formImc input[type="submit"] {
+        border: none;
+        background-color: rgb(90, 189, 228);
+        font-size: 20px;
+    }
+
+
+    .formImc label {
+        font-size: 20px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-family: 'Courier New';
+    }
+
+    .resultado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    #resultado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font: 1em 'Courier New';
+        font-size: 35px;
+        background-color: lightskyblue;
+        border: 1px solid black;
+        margin-top: 0px;
+        width: 60%;
+        margin-bottom: 8px;
+
+
+        transition: 0.5s;
+        color: white;
+    }
+
+    table {
+        background-color: transparent;
+        font-size: 20px;
+        border: 1px solid black;
+    }
+
+
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+
+    }
+
+    .table-calc {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    @media (max-width: 900px) {
+        #resultado {
+            font-size: 30px;
+
+            width: 100%;
+
+
+        }
+    }
+</style>
+
+</html>
