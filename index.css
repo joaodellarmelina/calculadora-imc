@@ -1,0 +1,95 @@
+
+    html {
+        background-color: lightblue;
+
+    }
+
+    .formImc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        gap: 10px;
+
+    }
+
+    .formImc input {
+        width: 200px;
+        height: 50px;
+        font-size: large;
+        text-align: center;
+        font-family: 'Courier New';
+
+    }
+
+    .formImc input[type="submit"] {
+        border: none;
+        background-color: rgb(90, 189, 228);
+        font-size: 20px;
+    }
+
+
+    .formImc label {
+        font-size: 20px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-family: 'Courier New';
+    }
+
+    .resultado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    #resultado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font: 1em 'Courier New';
+        font-size: 35px;
+        background-color: lightskyblue;
+        border: 1px solid black;
+        margin-top: 0px;
+        width: 60%;
+        margin-bottom: 8px;
+
+
+        transition: 0.5s;
+        color: white;
+    }
+
+    table {
+        background-color: transparent;
+        font-size: 20px;
+        border: 1px solid black;
+    }
+
+
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+
+    }
+
+    .table-calc {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    @media (max-width: 900px) {
+        #resultado {
+            font-size: 30px;
+
+            width: 100%;
+        }
+
+        table {
+            font-size: 15px;
+            margin-top: 20px;
+            border-top: 1px solid black;
+        }
+    }
